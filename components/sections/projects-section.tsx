@@ -116,7 +116,7 @@ const featuredProjects = [
   {
     id: 1,
     title: "Development of Driver Drowsiness Detection System",
-    description: "High-performance RESTful API with real-time inventory & payment processing.",
+    description: "A comprehensive driver drowsiness detection system using computer vision and machine learning. The system monitors driver's eye aspect ratio (EAR) and mouth aspect ratio (MAR) in real-time to detect signs of fatigue. Built with Python, OpenCV, and deployed on Raspberry Pi for embedded applications.",
     fullDescription:
       "A comprehensive driver drowsiness detection system using computer vision and machine learning. The system monitors driver's eye aspect ratio (EAR) and mouth aspect ratio (MAR) in real-time to detect signs of fatigue. Built with Python, OpenCV, and deployed on Raspberry Pi for embedded applications.",
     image: "https://s12.gifyu.com/images/bh5av.gif",
@@ -125,7 +125,7 @@ const featuredProjects = [
     featured: true,
     buttons: [
       /*{ type: "apiTester" },*/
-      { type: "github", url: "https://github.com/E9th/flash-sale.git" },
+      { type: "github", url: "https://github.com/E9th/driver-drowsiness-detection.git" },
       /*{ type: "youtube", url: "https://youtu.be/MOjGODNMYgU?si=UEkpjh0PuhQ2HwnI" },*/
     ] as ProjectButton[],
     hasApiTester: true,
@@ -167,6 +167,22 @@ const featuredProjects = [
       "An innovative IoT wearable device designed for cats to monitor body temperature and detect early signs of heat stroke. The collar uses temperature and humidity sensors connected to an Arduino board, with data transmitted to Google Cloud for real-time monitoring. Pet owners receive instant alerts through a mobile dashboard.",
     image: "https://s12.gifyu.com/images/bhDGP.gif",
     images: ["https://s12.gifyu.com/images/bhDGP.gif", "https://i.ibb.co/xKH52rzy/Moshi-Collar-2.webp", "https://i.ibb.co/sdzhgJpw/Moshi-Collar-7.webp", "https://i.ibb.co/TM0svHrc/Moshi-Collar-16.webp"],
+    tags: ["Arduino", "C++", "Google App Script"],
+    featured: true,
+    buttons: [
+      { type: "youtube", url: "https://www.youtube.com/watch?si=UEkpjh0PuhQ2HwnI&v=MOjGODNMYgU&feature=youtu.be" },
+    ] as ProjectButton[],
+    hasApiTester: false,
+    apiEndpoints: [],
+  },
+  {
+    id: 4,
+    title: "Uproperty",
+    description: "IoT Device for real-time Heat Stroke detection in cats with monitoring dashboard.",
+    fullDescription:
+      "An innovative IoT wearable device designed for cats to monitor body temperature and detect early signs of heat stroke. The collar uses temperature and humidity sensors connected to an Arduino board, with data transmitted to Google Cloud for real-time monitoring. Pet owners receive instant alerts through a mobile dashboard.",
+    image: "https://i.ibb.co/RGM6c8mn/Mockup1.png",
+    images: ["https://i.ibb.co/HLRCXYz7/High-fidelity-wireframe-for-desktop-Rev-2.png", "https://i.ibb.co/VWWfrv7S/Overview.png", "https://i.ibb.co/0Vqfxh78/Design-System-Component2.png", "https://i.ibb.co/0RsYJCvB/Design-System-Component3.png", "https://i.ibb.co/cXFWHK1Q/Class-Project-Wireframe-Responsive-UI-Interactive-Prototype-Figma-pdf.png", "https://i.ibb.co/hxxGvNc7/Class-Project-pdf-Page-1-of-1.png", "https://i.ibb.co/hxxGvNc7/Class-Project-pdf-Page-1-of-1.png"],
     tags: ["Arduino", "C++", "Google App Script"],
     featured: true,
     buttons: [
@@ -366,8 +382,8 @@ export function ProjectsSection() {
           </div>
         </div>
 
-       {/* Archive Section (Minimalist Table) */}
-        <div className="mt-20">
+       {/* Archive Section (Minimalist Table) - Hidden temporarily */}
+        {/* <div className="mt-20">
           <div className="flex items-center justify-between mb-6">
             <h3 className="text-xl font-semibold flex items-center gap-2">
               <Folder className="w-5 h-5 text-muted-foreground" />
@@ -424,7 +440,7 @@ export function ProjectsSection() {
               </table>
             </div>
           )}
-        </div>
+        </div> */}
 
         {/* API Tester Modal */}
         {selectedProject && <ApiTester project={selectedProject} onClose={() => setSelectedProject(null)} />}
@@ -522,7 +538,7 @@ export function ProjectsSection() {
                     <h3 className="text-xl md:text-2xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
                       {detailProject.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed whitespace-pre-wrap">
                       {detailProject.fullDescription || detailProject.description}
                     </p>
                   </div>

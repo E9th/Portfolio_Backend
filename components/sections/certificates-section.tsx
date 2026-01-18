@@ -21,32 +21,42 @@ import Image from "next/image"
 const featuredCertificates = [
   {
     id: 1,
-    title: "AWS Certified Solutions Architect",
-    issuer: "Amazon Web Services",
+    title: "User Experience and User Interface Design",
+    issuer: "UX/UI Design",
     date: "2024",
-    image: "/certificate-cloud-computing.jpg",
-    credentialUrl: "https://aws.amazon.com/verification",
-    skills: ["Cloud Architecture", "AWS Services", "Security"],
+    image: "https://i.ibb.co/998HGP4W/Certificate-User-Experience-and-User-Interface-Design.png",
+    credentialUrl: "https://i.ibb.co/998HGP4W/Certificate-User-Experience-and-User-Interface-Design.png",
+    skills: ["UX Design", "UI Design", "Prototyping"],
     featured: true,
   },
   {
     id: 2,
-    title: "Docker Certified Associate",
-    issuer: "Docker Inc.",
-    date: "2023",
-    image: "/certificate-container-tech.jpg",
-    credentialUrl: "https://docker.com/verify",
-    skills: ["Containerization", "Docker Swarm", "Orchestration"],
+    title: "Certificate Wireframe Responsive UI Interactive Prototype Figma",
+    issuer: "UX/UI Design",
+    date: "2024",
+    image: "https://i.ibb.co/Ndz5RvdX/Certificate-Wireframe-Responsive-UI-Interactive-Prototype-Figma-pdf-Pa.png",
+    credentialUrl: "https://i.ibb.co/Ndz5RvdX/Certificate-Wireframe-Responsive-UI-Interactive-Prototype-Figma-pdf-Pa.png",
+    skills: ["Figma", "Wireframing", "Responsive Design", "Prototyping"],
     featured: true,
   },
   {
     id: 3,
-    title: "Go Developer Certification",
-    issuer: "Google Developers",
+    title: "Certificate Design System Component Figma",
+    issuer: "UX/UI Design",
     date: "2024",
-    image: "/certificate-programming.jpg",
-    credentialUrl: "https://google.com/verify",
-    skills: ["Go Programming", "Concurrency", "Testing"],
+    image: "https://i.ibb.co/HfD1x77J/Certificate-Design-System-Component-Figma-pdf-Page-1-of-1.png",
+    credentialUrl: "https://i.ibb.co/HfD1x77J/Certificate-Design-System-Component-Figma-pdf-Page-1-of-1.png",
+    skills: ["Figma", "Design Systems", "Component Libraries"],
+    featured: true,
+  },
+  {
+    id: 4,
+    title: "Certificate Wireframe Figma",
+    issuer: "UX/UI Design",
+    date: "2024",
+    image: "https://i.ibb.co/SD1ff9bF/Certificate-Wireframe-Figma-pdf-Page-1-of-1.png",
+    credentialUrl: "https://i.ibb.co/SD1ff9bF/Certificate-Wireframe-Figma-pdf-Page-1-of-1.png",
+    skills: ["Figma", "Wireframing", "Responsive Design", "Prototyping"],
     featured: true,
   },
 ]
@@ -120,7 +130,7 @@ export function CertificatesSection() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-5">
-          <p className="text-primary font-mono text-sm mb-2">{"// Professional credentials"}</p>
+            {/* <p className="text-primary font-mono text-sm mb-2">{"// Professional credentials"}</p> */}
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
             Certificates
           </h2>
@@ -147,17 +157,17 @@ export function CertificatesSection() {
 
               <div className="relative grid md:grid-cols-2 h-full">
                 {/* Image Section with dark container */}
-                <div className="relative h-48 md:h-full min-h-[200px] bg-gradient-to-br from-neutral-900 to-neutral-800 overflow-hidden">
+                <div className="relative h-48 md:h-full min-h-[200px] bg-gradient-to-br from-primary/5 via-primary/5 to-background overflow-hidden">
                   {/* Grid pattern overlay */}
                   <div
                     className="absolute inset-0 opacity-10"
                     style={{
-                      backgroundImage: `linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px)`,
+                      backgroundImage: `linear-gradient(rgba(120,120,120,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(120,120,120,.1) 1px, transparent 1px)`,
                       backgroundSize: "20px 20px",
                     }}
                   />
-                  <div className="absolute inset-4 flex items-center justify-center">
-                    <div className="relative w-full h-full rounded-xl overflow-hidden border border-border/30 shadow-2xl bg-white/5">
+                  <div className="absolute inset-2 flex items-center justify-center">
+                    <div className="relative w-full h-full rounded-xl overflow-hidden border border-border/30 shadow-2xl bg-background/50">
                       <Image
                         src={featuredCertificates[0].image || "/placeholder.svg"}
                         alt={featuredCertificates[0].title}
@@ -177,7 +187,7 @@ export function CertificatesSection() {
 
                 <CardContent className="relative p-6 flex flex-col justify-center">
                   <Badge className="w-fit mb-3 bg-primary/20 text-primary border-primary/30">Top Credential</Badge>
-                  <h4 className="text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
+                  <h4 className="text-xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
                     {featuredCertificates[0].title}
                   </h4>
                   <div className="flex items-center gap-2 text-muted-foreground mb-1">
@@ -222,15 +232,15 @@ export function CertificatesSection() {
 
                   <div className="relative flex h-full">
                     {/* Image container with dark background */}
-                    <div className="relative w-28 shrink-0 bg-gradient-to-br from-neutral-900 to-neutral-800">
+                    <div className="relative w-28 shrink-0 bg-gradient-to-br from-primary/5 via-primary/5 to-background">
                       <div
                         className="absolute inset-0 opacity-10"
                         style={{
-                          backgroundImage: `linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px)`,
+                          backgroundImage: `linear-gradient(rgba(120,120,120,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(120,120,120,.1) 1px, transparent 1px)`,
                           backgroundSize: "10px 10px",
                         }}
                       />
-                      <div className="absolute inset-2 rounded-lg overflow-hidden border border-border/30">
+                      <div className="absolute inset-1 rounded-lg overflow-hidden border border-border/30">
                         <Image
                           src={cert.image || "/placeholder.svg"}
                           alt={cert.title}
@@ -240,7 +250,7 @@ export function CertificatesSection() {
                       </div>
                     </div>
                     <CardContent className="relative p-4 flex flex-col justify-center">
-                      <h4 className="font-semibold text-sm mb-1 text-foreground line-clamp-2 group-hover:text-primary transition-colors">
+                      <h4 className="font-semibold text-sm mb-2 text-foreground line-clamp-2 group-hover:text-primary transition-colors">
                         {cert.title}
                       </h4>
                       <p className="text-xs text-muted-foreground mb-1">{cert.issuer}</p>
@@ -253,7 +263,7 @@ export function CertificatesSection() {
           </div>
         </div>
 
-        <div className="border-t border-border/50 pt-5">
+        {/* <div className="border-t border-border/50 pt-5">
           <button
             onClick={() => setShowArchive(!showArchive)}
             className="flex items-center gap-2 mx-auto px-4 py-2 rounded-full border border-border/50 bg-card/30 text-muted-foreground hover:text-foreground hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group"
@@ -315,7 +325,7 @@ export function CertificatesSection() {
               </table>
             </div>
           )}
-        </div>
+        </div> */}
 
         {selectedCert && (
           <div
@@ -323,26 +333,26 @@ export function CertificatesSection() {
             onClick={() => setSelectedCert(null)}
           >
             <div
-              className="w-full max-w-lg bg-card/95 backdrop-blur-xl border-2 border-border/50 rounded-3xl shadow-2xl overflow-hidden my-auto relative"
+              className="w-full max-w-4xl bg-card/95 backdrop-blur-xl border-2 border-border/50 rounded-3xl shadow-2xl overflow-hidden my-auto relative"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Glow effect */}
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/30 rounded-full blur-3xl" />
 
-              <div className="relative h-48 bg-gradient-to-br from-neutral-900 to-neutral-800">
+              <div className="relative h-64 md:h-96 bg-gradient-to-br from-primary/5 via-primary/5 to-background">
                 <div
                   className="absolute inset-0 opacity-10"
                   style={{
-                    backgroundImage: `linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px)`,
+                    backgroundImage: `linear-gradient(rgba(120,120,120,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(120,120,120,.1) 1px, transparent 1px)`,
                     backgroundSize: "20px 20px",
                   }}
                 />
-                <div className="absolute inset-4 rounded-xl overflow-hidden border border-border/30 shadow-xl">
+                <div className="absolute inset-2 rounded-xl overflow-hidden border border-border/30 shadow-xl">
                   <Image
                     src={selectedCert.image || "/placeholder.svg"}
                     alt={selectedCert.title}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
               </div>
